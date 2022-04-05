@@ -27,6 +27,7 @@
     <!-- custom (main) css -->
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/animate.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <!--[if lt IE 7]>
@@ -218,7 +219,7 @@
           <div class="line"></div>
         </div>
 
-        <div class="row">
+        <div class="row"  data-aos="fade-up-left">
           <div class="language-item">
             <div class="language-head">
               <h3>ARABIC</h3>
@@ -266,7 +267,7 @@
           </div>
         </div>
   
-        <div class="row">
+        <div class="row" data-aos="fade-up-left">
           <div class="language-item">
             <div class="language-head">
               <h3>CHINESE</h3>
@@ -311,7 +312,7 @@
           </div>
         </div>
   
-        <div class="row">
+        <div class="row" data-aos="fade-up-left">
           <div class="language-item">
             <div class="language-head">
               <h3>ENGLISH</h3>
@@ -330,7 +331,7 @@
           </div>
         </div>
   
-        <div class="row">
+        <div class="row" data-aos="fade-up-left">
           <div class="language-item">
             <div class="language-head">
               <h3>FRENCH</h3>
@@ -353,7 +354,7 @@
           </div>
         </div>
   
-        <div class="row">
+        <div class="row" data-aos="fade-up-left">
           <div class="language-item">
             <div class="language-head">
               <h3>GERMAN</h3>
@@ -399,7 +400,7 @@
           </div>
         </div>
   
-        <div class="row">
+        <div class="row" data-aos="fade-up-left">
           <div class="language-item">
             <div class="language-head">
               <h3>ITALIAN</h3>
@@ -423,7 +424,7 @@
           </div>
         </div>
   
-        <div class="row">
+        <div class="row" data-aos="fade-up-left">
           <div class="language-item">
             <div class="language-head">
               <h3>RUSSIAN</h3>
@@ -468,7 +469,7 @@
           </div>
         </div>
   
-        <div class="row">
+        <div class="row" data-aos="fade-up-left">
           <div class="language-item">
             <div class="language-head">
               <h3>SPANISH</h3>
@@ -515,8 +516,12 @@
       <p>
         Click the download link below for a pdf instruction manual for accessing and using the C-Test[<i>editor</i>].
       </p>
-      <a class="center" href="tutorial.pdf" target="_blank">
-        <i class="fas fa-file-pdf-o"></i></a>
+        <div class="download" data-aos="flip-up">
+          <h2>Download Tutorial</h2>
+          <a class="center" href="tutorial.pdf" target="_blank">
+            <i class="fas fa-file-pdf-o"></i
+          ></a>
+        </div>
       </div>
     </section>
 
@@ -693,29 +698,20 @@
     <script src="resources/jquery-3.5.1.js"></script>
     <!-- custom js -->
     <script src="js/script.js" async defer></script>
-    <script src="js/jquery.visible.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
+      
+      // animation on scroll initiation
+      AOS.init();
+      
       $(document).ready(function () {
+        // animation for lead title and socials
         $(".lead_title, .lead_link").each(function (index) {
           let s = 0.4;
           wait = s * (1 + index) + "s";
-
           $(this).css("animation-delay", wait);
           $(this).addClass("animated fadeInUp");
-        });
-        $(window).scroll(function () {
-          $(".language-item").each(function (i, obj) {
-            if ($(this).visible()) {
-              $(this).addClass("animated fadeInRight");
-            }
-          });
-
-          $(".download").each(function (i, obj) {
-            if ($(this).visible()) {
-              $(this).addClass("animated fadeInUp");
-            }
-          });
         });
       });
     </script>
