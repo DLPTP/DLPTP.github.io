@@ -44,6 +44,15 @@ button {
   /* justify-content: center;
   align-items: center; */
 }
+.about_container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: center; 
+  flex-direction: column;
+  align-items: center; 
+}
 h1,
 h2,
 h3,
@@ -61,6 +70,7 @@ h6 {
   text-align: justify;
   text-justify: inter-word;
 }
+
 .center {
   display: flex;
   justify-content: center;
@@ -206,6 +216,14 @@ section {
   margin: 1.2rem auto;
   background: var(--tu-red-color);
   height: 2.5px;
+}
+
+.line2 {
+  width: 45px;
+  /* margin: 1.2rem auto; */
+  background: var(--tu-grey-color);
+  opacity: 0.3;
+  height: 1px;
 }
 
 /* language */
@@ -357,6 +375,13 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+
+.about_subTitle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media screen and (min-width: 992px) {
   .navbar {
