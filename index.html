@@ -26,6 +26,7 @@
 
     <!-- custom (main) css -->
     <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/animate.css" />
   </head>
   <body>
     <!--[if lt IE 7]>
@@ -89,9 +90,9 @@
           format), etc. These systems are designed for higher education.
         </p>
         <div class="lead_section">
-          <p>LEAD Graduate School & Research Network</p>
+          <p class="lead_title">LEAD Graduate School & Research Network</p>
           <ul>
-            <li>
+            <li class="lead_link">
               <a
                 class="link"
                 target="_blank"
@@ -99,7 +100,7 @@
                 >LEAD</a
               >
             </li>
-            <li>
+            <li class="lead_link">
               <a
                 class="youtube"
                 target="_blank"
@@ -109,7 +110,7 @@
                 <i class="fab fa-youtube"></i>
               </a>
             </li>
-            <li>
+            <li class="lead_link">
               <a
                 class="twitter"
                 target="_blank"
@@ -582,5 +583,25 @@
     <script src="resources/jquery-3.5.1.js"></script>
     <!-- custom js -->
     <script src="js/script.js" async defer></script>
+        <script src="js/jquery.visible.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".lead_title, .lead_link").each(function (index) {
+          let s = 0.4;
+          wait = s * (1 + index) + "s";
+
+          $(this).css("animation-delay", wait);
+          $(this).addClass("animated fadeInUp");
+        });
+        $(window).scroll(function () {
+          $(".language-item").each(function (i, obj) {
+            if ($(this).visible()) {
+              $(this).addClass("animated fadeInRight");
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>
