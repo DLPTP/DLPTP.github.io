@@ -319,8 +319,11 @@ section {
 .lead_section a {
   padding: 15px;
 }
-.lead_section a:hover {
+.lead_section a {
   color: var(--tu-white-color);
+}
+.lead_section a.link:hover {
+  color: var(--tu-gold-color);
 }
 .lead_section a.youtube:hover {
   color: red;
